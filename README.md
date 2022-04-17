@@ -2,6 +2,10 @@
 This Python program is used to execute cloc on given Github repository and send output through email as an attachment. 
 This program works both on Linux and Windows.
 
+CLOC installation
+-----------------
+You can download CLOC latest version from https://github.com/AlDanial/cloc/releases/tag/v1.92
+
 Configuration
 -------------
 Configure the below parameters to run this program.
