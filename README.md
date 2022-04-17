@@ -1,4 +1,4 @@
-# cloc
+# CLOC Analyser
 This Python program is used to execute cloc on given Github repository and send output through email as an attachment. 
 This program works both on Linux and Windows.
 
