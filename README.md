@@ -5,10 +5,10 @@ This program works both on Linux and Windows.
 Configuration
 -------------
 Configure the below parameters to run this program.
-1. github_url = <Enter Github repository address>
-2. sender_email_addr = <Enter your email address> 
-3. sender_email_pass = <Enter your email address password to login into your account>
-4. receiver_email_addr = <Enter receiver email address>
+1. github_url = "Enter Github repository address"
+2. sender_email_addr = "Enter your email address" 
+3. sender_email_pass = "Enter your email address password to login into your account"
+4. receiver_email_addr = "Enter receiver email address"
 
 NOTE: To login and send email from this script from your gmail account please make 'Allow less secure apps' ON
 Go to the Less secure app access section of your Google Account. You might need to sign in.
