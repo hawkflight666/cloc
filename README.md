@@ -6,8 +6,8 @@ CLOC installation
 -----------------
 You can download CLOC latest version from https://github.com/AlDanial/cloc/releases/tag/v1.92
 
-Configuration
--------------
+CLOC Analyser Configuration
+---------------------------
 Configure the below parameters to run this program.
 1. github_url = "Enter Github repository address"
 2. sender_email_addr = "Enter your email address" 
