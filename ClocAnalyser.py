@@ -20,12 +20,14 @@ from os.path import basename
 
 
 # Configurable parameters
-github_url="http://github.com/example/example.git"
-sender_email_addr="your_email@gmail.com"
-sender_email_pass="password"
-receiver_email_addr="receiver@gmail.com"
-output_file = "ClocReport.txt"
-
+github_url = "Enter Github repository address"
+sender_email_addr = "Enter your email address"
+sender_email_pass = "Enter your email address password to login into your account"
+receiver_email_addr = "Enter receiver email address"
+# Enter windows absolute path to executable cloc file i.e. D:\cloc\cloc-1.92.exe
+win_cloc_path = "absolute path to exe file"
+# Enter linux absolute path to executable cloc file i.e. /home/joe/pythonProjects/cloc/cloc-1.90/cloc
+linux_cloc_path = "absulute path to cloc executable file"
 
 def isplatform(plform):
     os_type = platform.system()
@@ -105,10 +107,10 @@ def run_cloc(github_dir):
     try:
         if isplatform('Windows'):
             print("Running CLOC on Windows..")
-            cloc_cmd = "cloc-1.92.exe " + github_dir + "> " + output_file
+            cloc_cmd = win_cloc_path + " " + github_dir + "> " + output_file
             os.system(cloc_cmd)
         elif isplatform('Linux'):
-            cloc_cmd = "cloc " + github_dir + "> " + output_file
+            cloc_cmd = linux_cloc_path + " " + github_dir + "> " + output_file
             os.system(cloc_cmd)
         elif isplatform('Darwin'):
             # output = os.system('cloc-1.92.exe {github_dir}')
