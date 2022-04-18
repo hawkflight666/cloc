@@ -11,6 +11,7 @@ email as an attachment
 import os
 import smtplib
 import platform
+import ssl
 from email import encoders
 from email.message import EmailMessage
 from email.mime.base import MIMEBase
@@ -28,6 +29,8 @@ receiver_email_addr = "Enter receiver email address"
 win_cloc_path = "absolute path to exe file"
 # Enter linux absolute path to executable cloc file i.e. /home/joe/pythonProjects/cloc/cloc-1.90/cloc
 linux_cloc_path = "absulute path to cloc executable file"
+
+output_file = "ClocReport.txt"
 
 def isplatform(plform):
     os_type = platform.system()
@@ -55,9 +58,10 @@ def download_git_repo():
 # Turn Allow less secure apps off.
 # If the two step verification is on, we cannot use the less secure access.
 def login(email_address, email_pass, s):
+    context = ssl.create_default_context()
     s.ehlo()
     # start TLS for security
-    s.starttls()
+    s.starttls(context=context)
     s.ehlo()
     # Authentication
     s.login(email_address, email_pass)
@@ -110,6 +114,7 @@ def run_cloc(github_dir):
             cloc_cmd = win_cloc_path + " " + github_dir + "> " + output_file
             os.system(cloc_cmd)
         elif isplatform('Linux'):
+            print("Running CLOC on Linux..")
             cloc_cmd = linux_cloc_path + " " + github_dir + "> " + output_file
             os.system(cloc_cmd)
         elif isplatform('Darwin'):
