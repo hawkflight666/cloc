@@ -13,8 +13,17 @@ Configure the below parameters to run this program.
 2. sender_email_addr = "Enter your email address" 
 3. sender_email_pass = "Enter your email address password to login into your account"
 4. receiver_email_addr = "Enter receiver email address"
+5. win_cloc_path = "absolute path to exe file" 
+6. linux_cloc_path = "absulute path to cloc executable file" 
 
 NOTE: To login and send email from this script from your gmail account please make 'Allow less secure apps' ON
 Go to the Less secure app access section of your Google Account. You might need to sign in.
 Turn Allow less secure apps off.
 If the two step verification is on, you cannot use the less secure access.
+
+Installation
+------------
+$ sudo git clone https://github.com/hawkflight666/cloc.git
+$ cd cloc
+$ sudo chmod +x ClocAnalyser.py
+$ py ClocAnalyser.py
