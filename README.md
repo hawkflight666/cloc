@@ -21,6 +21,10 @@ Go to the Less secure app access section of your Google Account. You might need 
 Turn Allow less secure apps off.
 If the two step verification is on, you cannot use the less secure access.
 
+Requirement
+-----------
+Python 3.5 and above
+
 Installation
 ------------
 1. $ git clone https://github.com/hawkflight666/cloc.git 
