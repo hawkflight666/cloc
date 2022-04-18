@@ -23,7 +23,6 @@ If the two step verification is on, you cannot use the less secure access.
 
 Installation
 ------------
-1. $ sudo git clone https://github.com/hawkflight666/cloc.git 
+1. $ git clone https://github.com/hawkflight666/cloc.git 
 2. $ cd cloc 
-3. $ sudo chmod +x ClocAnalyser.py 
-4. $ py ClocAnalyser.py
+3. $ py ClocAnalyser.py
